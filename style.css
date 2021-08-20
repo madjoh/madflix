@@ -1,0 +1,350 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+header nav {
+  cursor: pointer;
+}
+
+header nav .hamburger {
+  position: fixed;
+  right: 0;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  width: 45px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  header nav .hamburger {
+    display: none;
+  }
+}
+
+header nav .hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .hamburger span:first-child {
+  top: 10px;
+  left: 10px;
+}
+
+header nav .hamburger span:nth-child(2) {
+  top: 17px;
+  left: 10px;
+}
+
+header nav .hamburger span:last-child {
+  top: 24px;
+  left: 10px;
+}
+
+header nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav div ul {
+  list-style: none;
+}
+
+@media (min-width: 0px) {
+  header nav div ul {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav div ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+header nav div ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav div ul li a {
+  text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+header nav div ul li a:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: lightgray;
+}
+
+header nav div ul li a.active {
+  color: white;
+  font-weight: bold;
+}
+
+header nav div ul li a.active:hover {
+  color: lightgray;
+}
+
+header nav div ul li a img {
+  padding-left: 3rem;
+  padding-top: 0.3rem;
+  padding-right: 1rem;
+}
+
+header img {
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+@media (min-width: 1200px) {
+  header img {
+    margin: 1.5rem 1rem 1rem 4rem;
+  }
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 650px;
+  }
+}
+
+main img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 0%;
+     object-position: 100% 0%;
+}
+
+.mainmovie {
+  position: absolute;
+  color: white;
+  bottom: 30px;
+  left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mainmovie {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainmovie {
+    width: 50%;
+    left: 4rem;
+  }
+}
+
+.mainmovie h3 {
+  text-shadow: 1px 1px 4px gray;
+}
+
+.mainmovie h1 {
+  font-size: 1.9rem;
+  margin: 0.5rem 0;
+  text-shadow: 1px 1px 4px gray;
+}
+
+.mainmovie p {
+  line-height: 26px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px gray;
+}
+
+.category {
+  font-size: 1.3rem;
+  font-family: "Roboto";
+  margin: 1.5rem 0 1.5rem 1rem;
+}
+
+@media (min-width: 1200px) {
+  .category {
+    margin: 1.5rem 0 1.5rem 4rem;
+  }
+}
+
+.containerSlider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  margin: 0 0.5rem 0 1rem;
+}
+
+@media (min-width: 1200px) {
+  .containerSlider {
+    margin: 0 0.5rem 0 4rem;
+  }
+}
+
+.containerSlider::-webkit-scrollbar {
+  display: none;
+}
+
+.containerSlider .card {
+  margin: 0 0.5rem 0 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 212px;
+          flex: 0 0 212px;
+  height: 318px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: -webkit-flex-basis 0.3s ease;
+  transition: -webkit-flex-basis 0.3s ease;
+  transition: flex-basis 0.3s ease;
+  transition: flex-basis 0.3s ease, -webkit-flex-basis 0.3s ease, -ms-flex-preferred-size 0.3s ease;
+}
+
+.containerSlider .card * {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.containerSlider .card .card-thumb {
+  opacity: 1;
+  width: 212px;
+}
+
+.containerSlider .card:hover {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 424px;
+          flex: 0 0 424px;
+}
+
+.containerSlider .card:hover .card-thumb {
+  opacity: 0;
+}
+
+.containerSlider .card:hover .card-image {
+  opacity: 1;
+}
+
+.containerSlider .card:hover .card-image * {
+  opacity: 1 !important;
+}
+
+.containerSlider .card:hover .card-content * {
+  opacity: 1 !important;
+}
+
+.containerSlider .card .card-image {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.containerSlider .card .card-image .overlay-gradient {
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(20%, black), color-stop(80%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, black, black 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 100%;
+}
+
+.containerSlider .card .card-image img {
+  width: 424px;
+  height: 100%;
+}
+
+.containerSlider .card .card-content {
+  position: absolute;
+  width: 432px;
+  bottom: 0px;
+}
+
+.containerSlider .card .card-content .contentheading {
+  opacity: 0;
+  margin: 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px black;
+}
+
+.containerSlider .card .card-content p {
+  opacity: 0;
+  margin: 1.5rem 1.5rem;
+  font-size: 0.9rem;
+  line-height: 21px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.containerSlider .card .card-content__badges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1rem;
+}
+
+.containerSlider .card .card-content__badges * {
+  opacity: 0;
+}
+
+.containerSlider .card .card-content__badges > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.containerSlider .card .card-content__badges span {
+  font-size: 0.9rem;
+  margin: 0 1rem 0 0.5rem;
+}
+
+.containerSlider .card .card-content__badges span.badge {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+}
+
+.containerSlider .card .card-content__badges img {
+  margin-left: auto;
+  width: 32px;
+}
+
+footer {
+  margin: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
