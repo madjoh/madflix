@@ -37,7 +37,7 @@ fetch(apiPopRef)
         console.log("Det finns ingen data!");
 
     }else {
-      heroRef.innerHTML += "<main><div class='mainmovie'><h3>Filmtips: "+data.results[1].title+"</h3><h1>"+data.results[1].title+"</h1><p>"+data.results[1].overview+"</p></div><img src='https://image.tmdb.org/t/p/original"+data.results[1].backdrop_path+"'/></main>";
+      heroRef.innerHTML += "<main><div class='mainmovie'><h3>Film tip: "+data.results[0].title+"</h3><h1>"+data.results[0].title+"</h1><p>"+data.results[0].overview+"</p></div><img src='https://image.tmdb.org/t/p/original"+data.results[0].backdrop_path+"'/></main>";
         for (let i = 0; i < data.results.length; i++) {
             containerPopRef.innerHTML += "<article class='card'><img class='card-thumb' src='https://image.tmdb.org/t/p/original"+data.results[i].poster_path+"'/><div class='card-image'> <div class='overlay-gradient'></div><img src='https://image.tmdb.org/t/p/original"+data.results[i].backdrop_path+"'/></div><div class='card-content'><h2 class='contentheading'>"+data.results[i].title+"</h2><p>"+truncateText(data.results[i].overview)+"</p><div class='card-content__badges'><span>"+data.results[i].original_language+"</span><span>"+data.results[i].release_date+"</span><span class='badge'>+15</span><img src='img/mvdb.svg' /><span>"+data.results[i].vote_average+"</span></div></div></article>"; 
             

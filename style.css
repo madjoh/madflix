@@ -150,8 +150,8 @@ main img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 100% 0%;
-     object-position: 100% 0%;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
 }
 
 .mainmovie {
@@ -159,6 +159,7 @@ main img {
   color: white;
   bottom: 30px;
   left: 1rem;
+  right: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -179,16 +180,29 @@ main img {
 }
 
 .mainmovie h1 {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   margin: 0.5rem 0;
   text-shadow: 1px 1px 4px gray;
 }
 
+@media (min-width: 1200px) {
+  .mainmovie h1 {
+    font-size: 1.9rem;
+  }
+}
+
 .mainmovie p {
-  line-height: 26px;
+  line-height: 23px;
   font-size: 1rem;
   font-weight: 400;
   text-shadow: 1px 1px 4px gray;
+}
+
+@media (min-width: 1200px) {
+  .mainmovie p {
+    width: 50%;
+    line-height: 26px;
+  }
 }
 
 .category {
